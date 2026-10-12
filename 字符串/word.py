@@ -1,0 +1,6 @@
+st = input("输入一个单词")
+print(len(st))
+print(st.upper())
+print(st.lower())
+print(st[:3])
+print(st[-3:])

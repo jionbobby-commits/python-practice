@@ -1,0 +1,5 @@
+st = input("输入一句中文")
+st1 = st.encode("UTF-8")
+print(st1)
+st2 = st1.decode("UTF-8")
+print(st2)
