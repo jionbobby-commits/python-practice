@@ -1,3 +1,6 @@
+from builtins import IndexError, Exception
+
+
 class Student:
     def __init__(self,name,chinese,math,english):
         self.name = name
@@ -97,12 +100,14 @@ class Management_System:
 
         while True:
             print()
-            print("####################################################################")
+            print("##############################################################################")
             print("#1.添加学生2.修改学生信息3.删除学生信息4.查找指定学生5.查找所有学生6.退出系统#")
-            print("####################################################################")
+            print("##############################################################################")
 
             choice = input("输入您要进行的服务（仅输入数字）")
-            match choice:
+
+            try:
+             match choice:
                 case "1":
                     self.add_score()
                 case "2":
@@ -118,6 +123,11 @@ class Management_System:
                     break
                 case _:
                     print("输入错误请选择1~6")
+
+            except ValueError as e:
+                print("输入值错误，请检查重试哦~")
+            except Exception as e:
+                print("输入内容有误，请重试")
 
 if __name__ == "__main__":
     stu = Management_System()
