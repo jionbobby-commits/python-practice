@@ -1,0 +1,28 @@
+# Python 字节码与缓存（已有的历史 .pyc 仍被 Git 跟踪，见整理报告）
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境（实际环境和本地练习文件都不提交）
+.venv/
+venv/
+env/
+
+# IDE 本地状态；.idea 中已有的项目配置继续保留在 Git 中
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+
+# 本地整理备份（包含 ZIP、Git bundle、操作记录）
+_整理备份/
+
+# 运行时日志
+*.log
+
+# 爬虫脚本下载/生成的媒体文件
+综合项目/爬虫/video.mp4
+综合项目/爬虫/audio.mp3
+综合项目/爬虫/output.mp4
+
+# AI 朋友的本地聊天记录：已有示例仍可被跟踪，新建的聊天文件默认不入库
+综合项目/Streamlit应用/sessions/*.json
