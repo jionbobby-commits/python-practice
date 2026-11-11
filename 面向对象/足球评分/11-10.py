@@ -15,3 +15,12 @@ for i in range(1,10):
         print(f"{i}*{j}={i*j}",end="\t")
     print()
 
+total = 0
+n = 1
+
+for i in range(1,65):
+    total += n
+    n *= 2
+
+print(total)
+print(n//2)
