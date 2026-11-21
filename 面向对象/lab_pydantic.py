@@ -110,3 +110,19 @@ print ("使用整数 10 种子生成随机数：", random.random())
 random.seed("hello",2)
 print ("使用字符串种子生成随机数：", random.random())
 print ("使用字符串种子生成随机数：", random.random())
+
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key="你申请的 API key",
+)
+
+response = client.responses.create(
+    model="gpt-4o",
+    instructions="You are a coding assistant that talks like a pirate.",
+    input="How do I check if a Python object is an instance of a class?",
+)
+
+print(response.output_text)
